@@ -24,5 +24,5 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
       - name: Test
-        run: mvn -pl nifi-nar-bundles/nifi-ldap-iaa-providers-bundle/nifi-ldap-iaa-providers -am edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=org.apache.nifi.ldap.tenants.LdapUserGroupProviderTest -DfailIfNoTests=false -Dsurefire.failIfNoSpecifiedTests=false
+        run: mvn -pl nifi-nar-bundles/nifi-ldap-iaa-providers-bundle/nifi-ldap-iaa-providers -am edu.illinois:nondex-maven-plugin:2.1.1:nondex -DnondexRuns=15 -Dtest=org.apache.nifi.ldap.tenants.LdapUserGroupProviderTest -DfailIfNoTests=false -Dsurefire.failIfNoSpecifiedTests=false
 
